@@ -1,0 +1,16 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: quark-works
+      url-base: https://github.com/quark-works
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: combi-zmk-config
+      remote: quark-works
+      revision: main
+  self:
+    path: config
