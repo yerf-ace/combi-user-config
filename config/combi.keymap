@@ -41,7 +41,7 @@
 
             bindings = <
             
-            &kp ESC         &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &sql_concat      &kp N7      &kp N8      &kp N9      &kp EQUAL   &kp DEL
+            &kp ESC         &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp N7      &kp N8      &kp N9      &kp EQUAL   &kp DEL
             &trans          &KP LPAR    &KP LPAR    &kp LBKT    &kp RBKT    &kp PG_UP   &kp COLON   &kp N4      &kp N5      &kp N6      &kp MINUS   &kp RETE
             &kp LSHFT       &kp GRAVE   &kp BSLH    &kp HOME    &kp END     &kp PG_DN   &KP SEMI    &kp N1      &kp N2      &kp N3      &kp UP      &kp RSHFT
             &kp LCTRL       &kp LGUI    &kp LALT                                        &trans      &kp N0      &trans      &kp LEFT    &kp DOWN     &kp RIGHT
@@ -61,16 +61,5 @@
             status = "reserved";
         };
     };
-macros {
-        sql_concat: sql_concat {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings
-    = <&macro_tap &kp EQUAL &kp C &kp O &kp N &kp C &kp A &kp T &kp LPAR &kp QUOTE &kp APOS &kp QUOTE &kp COMMA &kp I &kp N &kp D &kp I &kp R &kp E &kp C &kp T &kp LPAR &kp QUOTE &kp R &kp C &kp LBKT &kp MINUS &kp 1 &kp RBKT &kp QUOTE &kp COMMA &kp 0 &kp RPAR &kp COMMA &kp QUOTE &kp APOS &kp COMMA &kp QUOTE &kp RPAR>
-    , <&kp RET>
-    ;
-        };
-    };
+
 };
