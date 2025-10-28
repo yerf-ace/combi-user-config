@@ -22,7 +22,6 @@
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -31,7 +30,7 @@
             bindings = <
             
             &kp TAB         &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P        &kp BSPC
-            &studio_unlock  &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SQT      &kp RET
+            &mo 1           &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SQT      &kp RET
             &kp LSHFT       &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT     &kp QUESTION &kp SLASH
             &kp LCTRL       &kp LGUI    &kp LALT    &mo 1       &kp SPACE   &trans                                           &kp LEFT    &kp DOWN     &kp RIGHT
             
@@ -43,7 +42,7 @@
             bindings = <
             
             &kp ESC         &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp N7      &kp N8      &kp N9      &kp EQUAL   &kp DEL
-            &trans          &KP LPAR    &KP LPAR    &kp LBKT    &kp RBKT    &kp PG_UP   &kp COLON   &kp N4      &kp N5      &kp N6      &kp MINUS   &kp RETE
+            &studio unlock  &KP LPAR    &KP LPAR    &kp LBKT    &kp RBKT    &kp PG_UP   &kp COLON   &kp N4      &kp N5      &kp N6      &kp MINUS   &kp RETE
             &kp LSHFT       &kp GRAVE   &kp BSLH    &kp HOME    &kp END     &kp PG_DN   &KP SEMI    &kp N1      &kp N2      &kp N3      &kp UP      &kp RSHFT
             &kp LCTRL       &kp LGUI    &kp LALT    &trans      &kp N0      &trans                                          &kp LEFT    &kp DOWN     &kp RIGHT
             
