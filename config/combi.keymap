@@ -6,10 +6,12 @@
 / {
 
     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            display-name = "Homerow Mods";
-            bindings = <&kp>, <&kp>;
+        tabesc: tab_escape {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESC>;
+            mods = <(MOD_LALT)>;
+        };
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -27,10 +29,10 @@
 
             bindings = <
             
-            &studio_unlock  &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
-            &kp TAB         &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp RET
-            &kp LSHFT       &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT     &kp UP      &kp SLASH
-            &kp LCTRL       &kp LGUI    &kp LALT    &kp SPACE   &mo 1       &mo 2                                           &kp LEFT    &kp DOWN    &kp RIGHT
+            &kp TAB         &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P        &kp BSPC
+            &studio_unlock  &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SQT      &kp RET
+            &kp LSHFT       &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT     &kp QUESTION &kp SLASH
+            &kp LCTRL       &kp LGUI    &kp LALT    &mo 1       &kp SPACE   &mo 2                                           &kp LEFT    &kp DOWN     &kp RIGHT
             
             >; 
         };
@@ -39,10 +41,10 @@
 
             bindings = <
             
-            &kp GRAVE       &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &trans
-            &trans          &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
-            &trans          &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
-            &trans          &trans      &trans      &trans      &trans      &trans                                          &trans      &trans      &trans
+            &kp ESC         &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &sql_concat      &kp N7      &kp N8      &kp N9      &kp EQUAL   &kp DEL
+            &trans          &KP LPAR    &KP LPAR    &kp LBKT    &kp RBKT    &kp PG_UP   &kp COLON   &kp N4      &kp N5      &kp N6      &kp MINUS   &kp RETE
+            &kp LSHFT       &kp GRAVE   &kp BSLH    &kp HOME    &kp END     &kp PG_DN   &KP SEMI    &kp N1      &kp N2      &kp N3      &kp UP      &kp RSHFT
+            &kp LCTRL       &kp LGUI    &kp LALT                                        &trans      &kp N0      &trans      &kp LEFT    &kp DOWN     &kp RIGHT
             
             >; 
         };
@@ -57,6 +59,18 @@
 
         layer_04 {
             status = "reserved";
+        };
+    };
+macros {
+        sql_concat: sql_concat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+    = <&macro_tap &kp EQUAL &kp C &kp O &kp N &kp C &kp A &kp T &kp LPAR &kp QUOTE &kp APOS &kp QUOTE &kp COMMA &kp I &kp N &kp D &kp I &kp R &kp E &kp C &kp T &kp LPAR &kp QUOTE &kp R &kp C &kp LBKT &kp MINUS &kp 1 &kp RBKT &kp QUOTE &kp COMMA &kp 0 &kp RPAR &kp COMMA &kp QUOTE &kp APOS &kp COMMA &kp QUOTE &kp RPAR>
+    , <&kp RET>
+    ;
         };
     };
 };
