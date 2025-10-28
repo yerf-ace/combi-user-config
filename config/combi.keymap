@@ -11,6 +11,7 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp ESC>;
             mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>
         };
 
             #binding-cells = <2>;
@@ -44,7 +45,7 @@
             &kp ESC         &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp N7      &kp N8      &kp N9      &kp EQUAL   &kp DEL
             &trans          &KP LPAR    &KP LPAR    &kp LBKT    &kp RBKT    &kp PG_UP   &kp COLON   &kp N4      &kp N5      &kp N6      &kp MINUS   &kp RETE
             &kp LSHFT       &kp GRAVE   &kp BSLH    &kp HOME    &kp END     &kp PG_DN   &KP SEMI    &kp N1      &kp N2      &kp N3      &kp UP      &kp RSHFT
-            &kp LCTRL       &kp LGUI    &kp LALT                                        &trans      &kp N0      &trans      &kp LEFT    &kp DOWN     &kp RIGHT
+            &kp LCTRL       &kp LGUI    &kp LALT    &trans      &kp N0      &trans                                          &kp LEFT    &kp DOWN     &kp RIGHT
             
             >; 
         };
@@ -61,5 +62,4 @@
             status = "reserved";
         };
     };
-
 };
